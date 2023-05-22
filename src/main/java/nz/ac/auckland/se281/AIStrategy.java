@@ -3,7 +3,7 @@ package nz.ac.auckland.se281;
 import java.util.List;
 import java.util.Random;
 
-public abstract class AIStrategy {
+public abstract class AiStrategy {
 
   public static Random random = new Random();
 
@@ -17,7 +17,7 @@ public abstract class AIStrategy {
   /*
    * @return the number of fingers the AI will play, using the random number generator given from the Utils.java file
    */
-  public int numOfAIsFingers() {
+  public int numOfAisFingers() {
     return (Utils.getRandomNumber(1, 5));
   }
 
