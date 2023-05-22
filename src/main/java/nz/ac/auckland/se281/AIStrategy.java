@@ -38,18 +38,18 @@ public abstract class AIStrategy {
   }
 
   /*
-   * @param AISum: the sum of fingers of AI
+   * @param aiSum: the sum of fingers of AI
    * @param playerSum: the sum of fingers of player
-   * @param AIFingers: the number of fingers of AI
+   * @param aiFingers: the number of fingers of AI
    * @param playerFingers: the number of fingers of player
    * @return the outcome of the game
    */
-  public String outcome(int AISum, int playerSum, int AIFingers, int playerFingers) {
-    Integer actualSum = AIFingers + playerFingers;
+  public String outcome(int aiSum, int playerSum, int aiFingers, int playerFingers) {
+    Integer actualSum = aiFingers + playerFingers;
 
-    if (playerSum == actualSum && AISum != actualSum) {
+    if (playerSum == actualSum && aiSum != actualSum) {
       return "HUMAN_WINS";
-    } else if (AISum == actualSum && playerSum != actualSum) {
+    } else if (aiSum == actualSum && playerSum != actualSum) {
       return "AI_WINS";
     } else {
       return "DRAW";

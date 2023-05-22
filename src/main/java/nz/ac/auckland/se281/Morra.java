@@ -122,7 +122,7 @@ public class Morra {
   public void executePlay(int playerFingers, int playerSum) {
 
     // create a new AI to make its move
-    Ai ai = new Ai();
+    AI ai = new AI();
 
     // get the AI's strategy, which is determined by the level that the player wanted to play with
     AiStrategy aiStrategy = level.strategy(numOfPlays);
