@@ -11,7 +11,7 @@ public class Morra {
   private int numOfPlays;
   private int pointsToWin;
   private int playerPoints;
-  private int AIPoints;
+  private int aiPoints;
   private String playerName;
   private boolean hasGameStarted;
 
@@ -20,12 +20,13 @@ public class Morra {
    */
   public Morra() {
     this.playerPoints = 0;
-    this.AIPoints = 0;
+    this.aiPoints = 0;
     this.hasGameStarted = false;
   }
 
   /*
-   * This method returns the level of difficulty the user has chosen, and sets up the game so that it is ready for the player to play
+   * This method returns the level of difficulty the user has chosen, and sets up the
+   * game so that it is ready for the player to play
    * @param difficulty: the level of difficulty the user has chosen
    * @param pointsToWin: the number of points the user has chosen to play up to
    * @param options: array of the player's name
@@ -121,22 +122,22 @@ public class Morra {
   public void executePlay(int playerFingers, int playerSum) {
 
     // create a new AI to make its move
-    AI AI = new AI();
+    Ai ai = new Ai();
 
     // get the AI's strategy, which is determined by the level that the player wanted to play with
-    AIStrategy AIStrategy = level.strategy(numOfPlays);
+    AiStrategy aiStrategy = level.strategy(numOfPlays);
 
     historyOfFingers.add(playerFingers);
 
     // get the number of fingers the AI has played, and the sum of the number of fingers the AI has
-    int numOfAIsFingers = AIStrategy.numOfAIsFingers();
-    int sumOfAIsFingers = AI.getAIFingersSum(this, AIStrategy, playerFingers, numOfAIsFingers);
+    int numOfAisFingers = aiStrategy.numOfAisFingers();
+    int sumOfAisFingers = ai.getAiFingersSum(this, aiStrategy, playerFingers, numOfAisFingers);
 
     MessageCli.PRINT_INFO_HAND.printMessage(
-        "Jarvis", Integer.toString(numOfAIsFingers), Integer.toString(sumOfAIsFingers));
+        "Jarvis", Integer.toString(numOfAisFingers), Integer.toString(sumOfAisFingers));
 
     // get the outcome of the play
-    String result = AIStrategy.outcome(sumOfAIsFingers, playerSum, numOfAIsFingers, playerFingers);
+    String result = aiStrategy.outcome(sumOfAisFingers, playerSum, numOfAisFingers, playerFingers);
     MessageCli.PRINT_OUTCOME_ROUND.printMessage(result);
 
     // increment the number of wins for the player or the AI, or a draw
@@ -153,7 +154,7 @@ public class Morra {
     if (resultOfPlay.equals("HUMAN_WINS")) {
       playerPoints++;
     } else if (resultOfPlay.equals("AI_WINS")) {
-      AIPoints++;
+      aiPoints++;
     }
   }
 
@@ -164,7 +165,7 @@ public class Morra {
     if (playerPoints == pointsToWin) {
       MessageCli.END_GAME.printMessage(playerName, Integer.toString(numOfPlays));
       this.hasGameStarted = false;
-    } else if (AIPoints == pointsToWin) {
+    } else if (aiPoints == pointsToWin) {
       MessageCli.END_GAME.printMessage("Jarvis", Integer.toString(numOfPlays));
       this.hasGameStarted = false;
     }
@@ -188,6 +189,6 @@ public class Morra {
     MessageCli.PRINT_PLAYER_WINS.printMessage(
         playerName, Integer.toString(playerPoints), Integer.toString(pointsToWin - playerPoints));
     MessageCli.PRINT_PLAYER_WINS.printMessage(
-        "Jarvis", Integer.toString(AIPoints), Integer.toString(pointsToWin - AIPoints));
+        "Jarvis", Integer.toString(aiPoints), Integer.toString(pointsToWin - aiPoints));
   }
 }

@@ -7,7 +7,7 @@ public class EasyLevel implements Level {
    * @return: the strategy that the AI will use - which is Rnadom Strategy
    */
   @Override
-  public AIStrategy strategy(int numOfPlays) {
+  public AiStrategy strategy(int numOfPlays) {
     return new RandomStrategy();
   }
 }

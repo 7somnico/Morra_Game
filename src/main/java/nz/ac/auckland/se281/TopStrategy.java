@@ -1,6 +1,6 @@
 package nz.ac.auckland.se281;
 
-public class TopStrategy extends AIStrategy {
+public class TopStrategy extends AiStrategy {
 
   /*
    * This method returns the sum of the number of fingers the AI player will play
@@ -9,7 +9,7 @@ public class TopStrategy extends AIStrategy {
    * @return the sum of the number of fingers the AI will play
    */
   @Override
-  public int sumOfFingers(int numOfAIFingers, int modeOfHistory) {
-    return numOfAIFingers + modeOfHistory;
+  public int sumOfFingers(int numOfAiFingers, int modeOfHistory) {
+    return numOfAiFingers + modeOfHistory;
   }
 }

@@ -7,7 +7,8 @@ public class LevelFactory {
   /*
    * This method returns the level of difficulty the user has chosen.
    * @param difficulty: the level of difficulty the user has chosen
-   * @return the level of difficulty the user has chosen, and this will trigger the reciporating strategy for these levels
+   * @return the level of difficulty the user has chosen, and this will trigger
+   * the reciporating strategy for these levels
    */
   public static Level setDifficulty(Difficulty difficulty) {
     switch (difficulty) {
