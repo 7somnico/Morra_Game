@@ -1,6 +1,6 @@
 package nz.ac.auckland.se281;
 
-public class RandomStrategy extends AiStrategy {
+public class RandomStrategy extends AIStrategy {
 
   /*
    * This method returns the sum of the number of fingers the AI player will play.

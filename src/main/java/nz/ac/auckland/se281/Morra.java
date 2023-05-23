@@ -125,7 +125,7 @@ public class Morra {
     AI ai = new AI();
 
     // get the AI's strategy, which is determined by the level that the player wanted to play with
-    AiStrategy aiStrategy = level.strategy(numOfPlays);
+    AIStrategy aiStrategy = level.strategy(numOfPlays);
 
     historyOfFingers.add(playerFingers);
 

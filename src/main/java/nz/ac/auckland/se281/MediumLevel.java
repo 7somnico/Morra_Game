@@ -8,7 +8,7 @@ public class MediumLevel implements Level {
    * the first three plays have been made
    */
   @Override
-  public AiStrategy strategy(int numOfPlays) {
+  public AIStrategy strategy(int numOfPlays) {
     if (numOfPlays < 4) {
       return new RandomStrategy();
     }

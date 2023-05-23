@@ -12,7 +12,7 @@ public class AI {
    * different way to calculate the sum of fingers
    */
   public int getAiFingersSum(
-      Morra game, AiStrategy strategy, int numOfPlayersFingers, int numOfAiFingers) {
+      Morra game, AIStrategy strategy, int numOfPlayersFingers, int numOfAiFingers) {
     if (strategy instanceof RandomStrategy) {
       return strategy.sumOfFingers(numOfAiFingers, numOfAiFingers);
     } else if (strategy instanceof AverageStrategy) {

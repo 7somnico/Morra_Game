@@ -3,7 +3,7 @@ package nz.ac.auckland.se281;
 import java.util.List;
 import java.util.Random;
 
-public abstract class AiStrategy {
+public abstract class AIStrategy {
 
   public static Random random = new Random();
 

@@ -8,7 +8,7 @@ public class MasterLevel implements Level {
    * strategy once the first three plays have been made
    */
   @Override
-  public AiStrategy strategy(int numOfPlays) {
+  public AIStrategy strategy(int numOfPlays) {
     if (numOfPlays < 4) {
       return new RandomStrategy();
     } else if (numOfPlays % 2 == 0) {

@@ -1,6 +1,6 @@
 package nz.ac.auckland.se281;
 
-public class TopStrategy extends AiStrategy {
+public class TopStrategy extends AIStrategy {
 
   /*
    * This method returns the sum of the number of fingers the AI player will play
